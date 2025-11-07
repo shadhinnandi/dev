@@ -1,0 +1,161 @@
+@import "./sass/vendors/bootstrap.scss";
+
+@import "./sass/abstracts/mixins";
+@import "./sass/abstracts/variables";
+@import "./sass/abstracts/helpers";
+
+@import "./sass/base/base";
+@import "./sass/base/typography";
+
+@import "./sass/components/buttons";
+
+@import "./sass/layout/footer";
+@import "./sass/layout/sections";
+
+@import "./sass/sections/about";
+@import "./sass/sections/contact";
+@import "./sass/sections/hero";
+@import "./sass/sections/projects";
+
+/* Animated name color cycling */
+@keyframes colorCycle {
+  0% { color: #008000; }      /* Green */
+  12.5% { color: #0066ff; }   /* Blue */
+  25% { color: #ffd700; }     /* Yellow */
+  37.5% { color: #ff1493; }   /* Pink */
+  50% { color: #ffffff; }     /* White */
+  62.5% { color: #ff0000; }   /* Red */
+  75% { color: #ff8c00; }     /* Orange */
+  87.5% { color: #000000; }   /* Black */
+  100% { color: #008000; }    /* Green */
+}
+
+.text-color-animate {
+  animation: colorCycle 24s ease-in-out infinite;
+  -webkit-text-fill-color: currentColor;
+}
+
+/* Spacing for contact CTA buttons */
+.cta-group .cta-btn {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Left-align content blocks for two-column sections */
+.education-content,
+.interests-content,
+.skills-content,
+.achievements-content {
+  text-align: left;
+}
+.education-content ul,
+.interests-content ul,
+.skills-content ul,
+.achievements-content ul {
+  margin-left: 1.2rem;
+}
+
+/* Info cards with breathing edge on hover */
+.info-card {
+  background: $white-color;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 2rem 2.4rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 300ms ease, transform 300ms ease;
+  position: relative;
+}
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+  animation: cardBreath 2.8s ease-in-out infinite;
+}
+@keyframes cardBreath {
+  0% { box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.25), 0 12px 26px rgba(0,0,0,0.16); }
+  50% { box-shadow: 0 0 0 10px rgba(30, 58, 138, 0.08), 0 16px 36px rgba(0,0,0,0.2); }
+  100% { box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.25), 0 12px 26px rgba(0,0,0,0.16); }
+}
+
+/* Consistent typography inside content blocks */
+.education-content h3,
+.education-content h4,
+.interests-content h3,
+.skills-content h3,
+.achievements-content h3,
+.achievements-content h4 {
+  color: $dark-blue-text;
+  font-weight: 700;
+  margin: 0 0 0.8rem 0;
+  text-align: left;
+}
+.education-content p,
+.interests-content p,
+.skills-content p,
+.achievements-content p,
+.education-content li,
+.interests-content li,
+.skills-content li,
+.achievements-content li {
+  font-family: "Montserrat", sans-serif;
+  font-size: $default-font-size;
+  line-height: 1.7;
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  z-index: 9999;
+  background-image: linear-gradient(90deg, $primary-color, $secondary-color);
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+/* Animated underline for section titles */
+.section-title {
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1.2rem;
+  height: 3px;
+  width: 0;
+  background-image: linear-gradient(90deg, $primary-color, $secondary-color);
+  transition: width 800ms ease;
+}
+.section-title.dark-blue-text::after,
+.section-title.load-hidden::after { width: 0; }
+.section-title:not(.load-hidden)::after { width: 120px; }
+
+/* Project card hover lift */
+#projects .thumbnail {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+#projects .thumbnail:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Subtle animated gradient in contact background */
+#contact {
+  background-size: 200% 200%;
+  animation: contactGradientShift 12s ease-in-out infinite;
+}
+@keyframes contactGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .text-color-animate { animation: none; }
+  #contact { animation: none; }
+  .section-title::after { transition: none; }
+  #projects .thumbnail { transition: none; }
+}

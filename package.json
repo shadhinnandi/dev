@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "Personal portfolio website showcasing my personal information, skills, projects, and contact details.",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --port 4000",
+    "build": "parcel build",
+    "build:watch": "parcel build --watch",
+    "serve:dist": "browser-sync start --server dist --files dist/**/* --port 5500 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadhinnandi/portfolio"
+  },
+  "keywords": [],
+  "author": "Shadhin Nandi",
+  "homepage": "git+https://github.com/shadhinnandi/portfolio",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "browser-sync": "^3.0.4",
+    "parcel": "^2.8.2",
+    "prettier": "^2.8.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.3",
+    "popper.js": "^1.16.1",
+    "vanilla-tilt": "^1.8.0"
+  }
+}
