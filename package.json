@@ -6,8 +6,8 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel --port 4000",
-    "build": "parcel build --dist-dir .",
-    "build:watch": "parcel build --watch --dist-dir .",
+    "build": "parcel build --dist-dir . --public-url ./",
+    "build:watch": "parcel build --watch --dist-dir . --public-url ./",
     "serve:dist": "browser-sync start --server . --files **/* --port 5500 --open"
   },
   "repository": {
