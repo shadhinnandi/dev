@@ -5,7 +5,7 @@
   "description": "Personal portfolio website showcasing my personal information, skills, projects, and contact details.",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel src/index.html --port 4000",
+    "start": "parcel src/index.html",
     "build": "parcel build src/index.html --dist-dir docs --public-url ./",
     "build:watch": "parcel build src/index.html --watch --dist-dir docs --public-url ./",
     "serve:dist": "browser-sync start --server . --files **/* --port 5500 --open"
