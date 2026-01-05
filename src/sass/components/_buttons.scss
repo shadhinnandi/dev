@@ -105,3 +105,24 @@
 .up i {
   color: #272727;
 }
+/* Read More Button */
+.read-more-btn {
+  background: transparent;
+  border: none;
+  color: $primary-color;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  
+  &:hover {
+    color: $secondary-color;
+  }
+  
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+}

@@ -79,10 +79,6 @@ You can customize various aspects of the portfolio:
 - Configure scroll animations in `data/scrollRevealConfig.js`
 - Add/modify projects in the projects section
 
-## 📝 License
-
-This project is open source and available under the MIT License.
-
 ## 📞 Contact
 
 Feel free to reach out if you have any questions or would like to connect!

@@ -1,3 +1,23 @@
+# Dependencies
 node_modules/
+
+# Build outputs & cache
 dist/
-.parcel-cache
+docs/
+.parcel-cache/
+.parcel-dev/
+
+# Build artifacts (don't commit to root)
+/index.html
+/assets/
+/*.js
+/*.css
+/*.js.map
+/*.css.map
+/*.png
+/*.jpg
+/*.jpeg
+/*.gif
+
+# Keep source files
+!src/**/*

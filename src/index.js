@@ -1,9 +1,11 @@
 import initScrollReveal from "./scripts/scrollReveal";
 import initTiltEffect from "./scripts/tiltAnimation";
 import { targetElements, defaultProps } from "./data/scrollRevealConfig";
+import initBackgroundAnimation from "./scripts/background";
 
 initScrollReveal(targetElements, defaultProps);
 initTiltEffect();
+initBackgroundAnimation();
 
 // Scroll progress bar
 const progressEl = document.getElementById("scroll-progress");

@@ -62,17 +62,18 @@
 
     <!-- **** Hero Section **** -->
     <section id="hero" class="jumbotron">
-      <div class="container">
-        <h1 class="hero-title load-hidden">
-          Hello There! <br> It's <span class="text-color-main text-color-animate">Shadhin Nandi</span><br />
-          <span style="font-size: 3rem;">4th-year CS Undergrad | Research Enthusiast</span>
-        </h1>
-        
-        <p class="hero-cta load-hidden">
-          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
-            >Let's Explore</a
-          >
-        </p>
+      <div class="container hero-shell">
+        <div class="hero-glass load-hidden" id="hero-glass-box">
+          <h1 class="hero-title">
+            <span class="text-color-main text-color-animate">Shadhin Nandi</span>
+          </h1>
+          <p class="hero-subtitle">CS Undergrad | Research Enthusiast</p>
+          <p class="hero-cta">
+            <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
+              >Let's Explore</a
+            >
+          </p>
+        </div>
       </div>
     </section>
     <!-- /END Hero Section -->
@@ -101,10 +102,13 @@
                 I enjoy turning ideas into working projects, exploring the intersection of software development 
                 and real-world impact, and helping others learn along the way as an undergraduate teaching assistant.
               </p>
-              <p class="about-wrapper__info-text">
-                Oh, and I might also be attempting to master the art of making the perfect cup of coffee, 
-                binge-watching random documentaries or movies, or losing track of time in a video game marathon.
-              </p>
+              <div class="about-wrapper__info-text-wrapper">
+                <p class="about-wrapper__info-text about-wrapper__info-text--expandable">
+                  Oh, and I might also be attempting to master the art of making the perfect cup of coffee, 
+                  binge-watching random documentaries or movies, or losing track of time in a video game marathon.
+                </p>
+                <button class="read-more-btn" aria-expanded="false">Read More</button>
+              </div>
               <span class="d-flex mt-3">
                 <a
                   rel="noreferrer"
@@ -262,7 +266,7 @@
                   class="cta-btn cta-btn--hero"
                   href="#!"
                 >
-                  See Live
+                  Soon
                 </a>
                 <a
                   rel="noreferrer"
@@ -270,7 +274,7 @@
                   class="cta-btn text-color-main"
                   href="#!"
                 >
-                  Source Code
+                  working!
                 </a>
               </div>
             </div>
@@ -312,7 +316,7 @@
                   class="cta-btn cta-btn--hero"
                   href="#!"
                 >
-                  See Live
+                  Soon
                 </a>
                 <a
                   rel="noreferrer"
@@ -320,7 +324,7 @@
                   class="cta-btn text-color-main"
                   href="#!"
                 >
-                  Source Code
+                  working!
                 </a>
               </div>
             </div>

@@ -73,6 +73,28 @@
             font-style: normal;
           }
         }
+
+        &--expandable {
+          max-width: 120px;
+          overflow: hidden;
+          display: inline;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          transition: all ease-in-out 0.3s;
+          line-height: 1.6;
+
+          &.expanded {
+            max-width: none;
+            display: block;
+            white-space: normal;
+            overflow: visible;
+          }
+        }
+      }
+
+      &-text-wrapper {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
